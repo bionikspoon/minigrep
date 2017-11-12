@@ -1,9 +1,9 @@
-extern crate minigrep;
+extern crate minigrep_lib;
 
 use std::env;
 use std::process;
 
-use minigrep::{Config, Env};
+use minigrep_lib::{Config, Env};
 
 fn main() {
     let env = Env::new();
@@ -13,7 +13,7 @@ fn main() {
         process::exit(1);
     });
 
-    if let Err(e) = minigrep::run(config) {
+    if let Err(e) = minigrep_lib::run(config) {
         eprintln!("Application error: {}", e);
         process::exit(1);
     }

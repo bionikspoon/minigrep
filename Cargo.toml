@@ -1,6 +1,11 @@
 [package]
-name = "minigrep"
+name = "minigrep_lib"
 version = "0.1.0"
 authors = ["Manu Phatak <manu@thinkcerca.com>"]
+license = "MIT"
+description = "Rust implementation of grep."
 
 [dependencies]
+
+[[bin]]
+name = "minigrep"

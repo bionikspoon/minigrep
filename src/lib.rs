@@ -4,6 +4,7 @@ use std::fs::File;
 use std::io::prelude::*;
 use std::iter::Iterator;
 
+/// run minigrep on `Config` struct.
 pub fn run(config: Config) -> Result<(), Box<Error>> {
     let mut f = File::open(config.filename)?;
     let mut contents = String::new();
